@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+		"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry
+		location="D:\Work\jar\connector-java-5.1.16.jar" />
+	<context id="context1">
+		<!-- 注释 -->
+		<commentGenerator>
+			<!-- 是否取消注释 -->
+			<property name="suppressAllComments" value="true" />
+			<property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳 -->
+		</commentGenerator>
+		<jdbcConnection
+			connectionURL="jdbc:mysql://localhost:3307/medicine?serverTimezone=UTC"
+			driverClass="com.mysql.jdbc.Driver" password="loveyouhsy" userId="root" />
+		<!-- pojo生成位置 -->
+		<javaModelGenerator
+			targetPackage="com.yal.pojo" targetProject="src/main/java" />
+		<!-- mapper配置文件生成 -->
+		<sqlMapGenerator targetPackage="mapper"
+			targetProject="src/main/resources" />
+		<!-- dao接口生成 -->
+		<javaClientGenerator
+			targetPackage="com.yal.dao" targetProject="src/main/java"
+			type="XMLMAPPER" />
+
+	
+		<table domainObjectName="Pharmaceutical" tableName="pharmaceutical"></table>
+		<table domainObjectName="Prandse" tableName="prandse"></table>
+		<table domainObjectName="Primary_class" tableName="primary_class"></table>
+		<table domainObjectName="Reclassify_class" tableName="reclassify_class"></table>
+		<table domainObjectName="Seandre" tableName="seandre"></table>
+		<table domainObjectName="Secondary_class" tableName="secondary_class"></table>
+		
+	</context>
+</generatorConfiguration>
